@@ -16,16 +16,18 @@
 <body>
     <style>
         .swiper {
-      width: 100%;
+      width: 50%;
       padding-top: 50px;
       padding-bottom: 50px;
     }
 
     .swiper-slide {
+      
       background-position: center;
       background-size: cover;
-      width: 300px;
-      height: 300px;
+      width: fit-content;
+     
+      background-color: blue;
     }
 
     .swiper-slide img {
@@ -38,14 +40,13 @@
 
         <header>
             <nav>
-                <button onclick="">Projetos</button>
-                <button>Sobre</button>
+                <button id="projetos">Projetos</button>
+                <button >Sobre</button>
                 <button>Stacks</button>
             </nav>
 
-            <div id="nome">
-                <p>Alexandre Armelline</p>
-                <h1><strong>Desenvolvedor Front-end</strong></h1>
+            <div id="logo">
+                <img src="img/logo.png" alt="">
             </div>
         </header>
 
@@ -56,46 +57,31 @@
             </div>
 
             <div id="ola">
-                <h2> &lt;Olá Mundo!&gt;</h2>
+                <h2>&lt;Olá Mundo!&gt;</h2>
             </div>
 
-            <div id="carrossel">
+            <div id="carrossel" class="esconder">
                  <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <img src="img/culturama.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        <img src="img/alura_books.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        <img src="img/pao_ancestral.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        <img src="img/mochila_de_viagem.png" />
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        <img src="img/alura_plus.png" />
                     </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                    </div>
-                    </div>
+                    
                     <div class="swiper-pagination"></div>
                 </div>
-
-                
-
                 
             </div>
 
@@ -114,8 +100,8 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
+        grabCursor: false,
+        centeredSlides: false,
         slidesPerView: "auto",
         coverflowEffect: {
             rotate: 50,
@@ -124,12 +110,16 @@
             modifier: 1,
             slideShadows: true,
         },
-        pagination: {
-            el: ".swiper-pagination",
-        },
+        loop: true,
+        speed: 6000,
+                autoplay: {
+                delay: 0,
+                },
+
         });
     </script>
     
+    <script src="script.js"></script>
 </body>
 </html>
 

@@ -7,8 +7,6 @@
     --font2: "Comfortaa", sans-serif;
 }
 
-
-
 *{
     margin:0px;
     padding: 0px;
@@ -52,6 +50,7 @@ button{
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.192);
     background-color: rgba(158, 66, 250, 0.363);
     cursor: pointer;
+    font-family: pattana;
 }
 
 button:hover{
@@ -64,15 +63,12 @@ button:active{
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.192);
 }
 
-#nome{
-    padding: 45px 0px 0px 100px;
+#logo{
+    padding: 45px 0px 0px 50px;
 }
 
-#nome p{
-    color: var(--corFont1);
-    font-family: var(--font1);
-    font-size: 3.5rem;
-   
+#logo img{
+    width: 400px;
 }
 
 #nome h1{
@@ -110,10 +106,9 @@ main{
 }
 
 #ola{
-    width: 50vw;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50vw;
+    padding: 130px 0px 0px 120px;  
+    
 
 }
 
@@ -124,13 +119,20 @@ main{
     font-size: 3rem;
     font-family: var(--font1);
     padding: 0px 130px 50px 0px;
-   
-   
 }
 
+.esconder{
+    display: none;
+}
 
 #carrossel{
-    display: none;   
+    background-color: aliceblue;
+    width: 60vw;
+    border-radius: 30px 0px 0px 30px;
+    box-shadow: 3px 10px 7px rgba(0, 0, 0, 0.432);
+    /* background-color: rgb(158, 66, 250); */
+    background-image: linear-gradient(45deg, #0F1444 , #871FF2);
+    padding-left: 10px;
 }
 
 
