@@ -15,24 +15,29 @@
 </head>
 <body>
     <style>
-        .swiper {
-      width: 50%;
+    .swiper {
+      width: 120%;
+    
       padding-top: 50px;
       padding-bottom: 50px;
+      
     }
 
     .swiper-slide {
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-position: center;
       background-size: cover;
-      width: fit-content;
-     
-      background-color: blue;
+      width: 30%;  
+      margin-right: 10px;  
     }
 
     .swiper-slide img {
       display: block;
       width: 100%;
+      border-radius: 15px;
+      box-shadow: 3px 7px 7px rgba(0, 0, 0, 0.432);
     }
     </style>
   
@@ -46,7 +51,7 @@
             </nav>
 
             <div id="logo">
-                <img src="img/logo.png" alt="">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
             </div>
         </header>
 
@@ -64,30 +69,42 @@
                  <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/culturama.png" />
+                        <div class="swiper-slide">
+                            <img src="img/culturama.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/alura_books.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/pao_ancestral.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/mochila_de_viagem.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/alura_plus.png" />
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="img/alura_books.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/pao_ancestral.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/mochila_de_viagem.png" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/alura_plus.png" />
-                    </div>
-                    
-                    <div class="swiper-pagination"></div>
                 </div>
-                
+            </div>
+
+            <div id="containerSwiperExpandido">
+
             </div>
 
             
         </main>
 
+        <footer>
+            <div id="containerTextosFooter">
+                <p>Desenvolvido por Alexandre Armelline</p>
+                <h1><strong>Desenvolvedor Front-end</strong></h1>
+            </div>
+            <div id="containerRedeSociais">
+                <img src="img/github.png" alt="">
+                <img src="img/linkedin.png" alt="">
+            </div>
+        </footer>
 
 
     </div>
@@ -113,7 +130,7 @@
         loop: true,
         speed: 6000,
                 autoplay: {
-                delay: 0,
+                delay: 0.1 ,
                 },
 
         });
