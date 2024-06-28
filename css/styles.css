@@ -103,7 +103,6 @@ main{
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.582);
     margin: 100px 0px 0px 40px;
-    
     animation: 3s diminuir infinite alternate;
 }
 
@@ -135,55 +134,95 @@ main{
     cursor: pointer;
 }
 
-#containerSwiperExpandidoCulturama{
+.containerSwiperExpandido{
     background-color: #7e72e6f1;
     width: 70%;
-    height: 80%;
+    height: fit-content;
     position: absolute;
     margin: 80px 0px 0px 200px ;
     border-radius: 20px;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.432);
     z-index: 1;
-    
+    animation: .5s crescer ;
 }
 
-#x{
-    width: 15px;
-    height: 15px;
-}
-
-#containerSperior{
+.containerSuperior{
     display: flex;
     margin: 15px 15px 0px 10px;
 }
 
-#containerSperior div{
+.containerSuperior div{
     padding: 0px 20px;
 }
 
-#containerInferior{
-    margin: 30px 50px 0px 20px;
-}
-
-#containerSperior h4{
+.containerSuperior h4{
     color: white;
     font-size: 2rem;
     text-align: center;
     padding-bottom: 20px;
 }
 
-#containerSperior p{
+.containerSuperior p{
     font-size: 1rem;
 }
 
-#containerInferior h4{
+
+
+.x{
+    width: 15px;
+    height: 15px;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.432));
+    cursor: pointer;
+}
+
+.x:hover{
+    opacity: 80%;
+    
+}
+
+.x:active{
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.795));
+}
+
+.containerInferior{
+    margin: 30px 50px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerInferior h4{
     margin-bottom: 20px;
     color: white;
     font-size: 1.5rem;
+}   
+
+.containerInferior p{
+    font-size: 1rem;
 }
 
-#containerInferior p{
-    font-size: 1rem;
+.containerInferior a{
+    text-decoration: none;
+    color: var(--corFont1);
+    font-family: var(--font2);
+    font-size: 1.3rem;
+    background-color: rgb(108, 6, 209);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.39);
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+.containerInferior a:hover{
+    background-color: rgba(108, 6, 209, 0.705);
+    
+}
+
+.containerInferior a:active{
+    background-color: rgba(139, 23, 255, 0.911);
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.192);
 }
 
 .imgExpandida{
@@ -222,7 +261,6 @@ footer h1, p{
     height: 100%;
     padding-bottom: 5px;
     padding-right: 100px;
-    
 }
 
 footer img{ 
@@ -250,6 +288,15 @@ footer img{
     }
     to{
         transform: scale(.9);
+    }
+}
+
+@keyframes crescer {
+    from{
+        transform: scale(.1);
+    }
+    to{
+        transform: scale(1);
     }
 }
 
