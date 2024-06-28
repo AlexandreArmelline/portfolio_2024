@@ -15,7 +15,7 @@
 }
 
 
-#container{
+#containerPrincipal{
    display: flex;
    flex-direction: column;
    background-image: linear-gradient(180deg, #871FF2, #0F1444);
@@ -132,6 +132,64 @@ main{
     /* box-shadow: 3px 10px 7px rgba(0, 0, 0, 0.432); */
     /* background-image: linear-gradient(45deg, #7604b8 , #38f21fa8); */
     padding-left: 10px;
+    cursor: pointer;
+}
+
+#containerSwiperExpandidoCulturama{
+    background-color: #7e72e6f1;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    margin: 80px 0px 0px 200px ;
+    border-radius: 20px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.432);
+    z-index: 1;
+    
+}
+
+#x{
+    width: 15px;
+    height: 15px;
+}
+
+#containerSperior{
+    display: flex;
+    margin: 15px 15px 0px 10px;
+}
+
+#containerSperior div{
+    padding: 0px 20px;
+}
+
+#containerInferior{
+    margin: 30px 50px 0px 20px;
+}
+
+#containerSperior h4{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#containerSperior p{
+    font-size: 1rem;
+}
+
+#containerInferior h4{
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#containerInferior p{
+    font-size: 1rem;
+}
+
+.imgExpandida{
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.432);
 }
 
 
