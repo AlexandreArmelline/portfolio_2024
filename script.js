@@ -1,12 +1,46 @@
 const botaoProjetos = document.querySelector("#projetos");
 const ola = document.querySelector("#ola");
 const carrossel = document.querySelector("#carrossel");
+const botaoSobre = document.querySelector("#sobre")
+const containerSobre = document.querySelector("#containerSobre")
 // const projetos = document.querySelectorAll(".swiper-slide");
 
 
 botaoProjetos.addEventListener('click', ()=>{
     ola.classList.add('esconder')
     carrossel.classList.remove('esconder') 
+    containerSobre.classList.add('esconder')
+//    -- Initialize Swiper 
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: false,
+        centeredSlides: false,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        loop: true,
+        speed: 6000,
+                autoplay: {
+                delay: 0.1 ,
+                },
+
+        });
+} )
+
+botaoSobre.addEventListener('click', ()=>{
+    ola.classList.remove('esconder')
+    containerSobre.classList.remove('esconder')
+    carrossel.classList.add('esconder') 
+    containerExpandidoCulturama.classList.add('esconder')
+    containerExpandidoAlura_books.classList.add('esconder') 
+    containerSwiperExpandidoPao_ancestral.classList.add('esconder')
+    containerSwiperExpandidoMochila_de_viagem.classList.add('esconder')
+    containerSwiperExpandidoAlura_plus.classList.add('esconder')
 } )
 
 
