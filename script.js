@@ -5,6 +5,30 @@ const botaoSobre = document.querySelector("#sobre")
 const containerSobre = document.querySelector("#containerSobre")
 // const projetos = document.querySelectorAll(".swiper-slide");
 
+let outputArray = [];
+const myRequestout = new Request('output.txt');
+
+fetch(myRequestout)
+    .then(response => response.text())
+    .then((text) => {
+        // Converte o texto em um array, dividindo por quebras de linha
+        outputArray = text.split('\n').filter(line => line.trim() !== '');
+        console.log(outputArray);
+    })
+    .catch((error) => console.error('Erro ao ler o arquivo:', error));
+
+
+
+let texto = '';
+const myRequest = new Request('Testetxt.txt');
+
+fetch(myRequest)
+ .then(response => response.text())
+ .then((text) =>{
+    texto = text;
+    console.log(texto);
+ });
+
 
 botaoProjetos.addEventListener('click', ()=>{
     ola.classList.add('esconder')
