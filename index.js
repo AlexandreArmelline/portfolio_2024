@@ -23,10 +23,11 @@ function atualizarArquivo(diretorio) {
 }
 
 // Diretório que será monitorado
-const diretorio = 'teste';
+const diretorio = 'projetos'; 
 
 // Chama a função pela primeira vez para salvar o estado inicial
 atualizarArquivo(diretorio);
+
 
 // Monitorando o diretório para alterações
 fs.watch(diretorio, (eventType, filename) => {
@@ -35,5 +36,7 @@ fs.watch(diretorio, (eventType, filename) => {
         atualizarArquivo(diretorio);
     }
 });
+
+
 
 console.log(`Monitorando mudanças no diretório: ${diretorio}`);
