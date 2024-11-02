@@ -22,11 +22,35 @@ fetch(myRequestout)
 
         // Verifica se há itens no array antes de tentar acessar
         if (nomeProjetos.length > 0) {
-            container_slide.innerHTML = `<div id="${nomeProjetos[i]}" class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" /></div>`;
+            for(let i = 0; i < nomeProjetos.length; i++){
+            container_slide.innerHTML += `<div id="${nomeProjetos[i]}" class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" /></div>`;}
         }
-        console.log(nomeProjetos[0]);
+        console.log(nomeProjetos);
     })
     .catch((error) => console.error('Erro ao ler o arquivo:', error));
+
+
+    `<div id="containerExpand" class="containerSwiperExpandido esconder">
+
+    <div class="containerSuperior">
+        <img class="imgExpandida" src="projetos/${nomeProjetos[i]}/img.png" alt="">
+        <div>
+            <h4>Titulo</h4>
+            <p>Paragrafo</p>
+        </div>
+
+        <img id="xPao_ancestral" class="x" src="img/x.png" alt="">               
+
+    </div>
+
+    <div class="containerInferior">
+        <h4>Titulo2</h4>
+        <p>Paragrafo2</p>
+
+        <a href="https://culturama-alura-topaz.vercel.app/" target="_blank">Ver o Projeto</a>
+    </div>
+
+</div> `
 
 
 

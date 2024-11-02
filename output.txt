@@ -1,2 +1,5 @@
-AluraBooks
-Culturama
+aluraBooks
+aluraPlus
+culturama
+mochilaViagem
+paoAncestral
