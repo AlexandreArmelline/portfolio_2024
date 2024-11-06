@@ -136,7 +136,7 @@ main{
     overflow: hidden;
 }
 
-.swiper-slide{
+.swiper-wrapper{
     cursor: pointer;
 }
 

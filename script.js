@@ -4,9 +4,9 @@ const carrossel = document.querySelector("#carrossel");
 const botaoSobre = document.querySelector("#sobre");
 const containerSobre = document.querySelector("#containerSobre");
 const container_slide = document.querySelector("#container_slide");
+const containerExpandido = document.querySelector("#containerExpandido");
 
 
-// const projetos = document.querySelectorAll(".swiper-slide");
 
 
 //Converte o arquivo output.txt em uma array(let nomeProjetos)  
@@ -23,34 +23,209 @@ fetch(myRequestout)
         // Verifica se há itens no array antes de tentar acessar
         if (nomeProjetos.length > 0) {
             for(let i = 0; i < nomeProjetos.length; i++){
-            container_slide.innerHTML += `<div id="${nomeProjetos[i]}" class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" /></div>`;}
+            container_slide.innerHTML += `<div  class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}" /></div>`;}
         }
         console.log(nomeProjetos);
+        console.log(container_slide);
     })
     .catch((error) => console.error('Erro ao ler o arquivo:', error));
 
 
-    `<div id="containerExpand" class="containerSwiperExpandido esconder">
+    container_slide.addEventListener('click', (evento)=>{
 
-    <div class="containerSuperior">
-        <img class="imgExpandida" src="projetos/${nomeProjetos[i]}/img.png" alt="">
-        <div>
-            <h4>Titulo</h4>
-            <p>Paragrafo</p>
-        </div>
+        //converte txt em uma variavel com valor = ao conteudo do txt
+        
+        let titulo = '';
+        console.log('titulo Vazio = ' + titulo)
+        const myRequestTitulo = new Request(`projetos/${evento.target.id}/Titulo.txt`);
 
-        <img id="xPao_ancestral" class="x" src="img/x.png" alt="">               
+        fetch(myRequestTitulo)
+         .then(response => response.text())
+         .then((text) =>{
+            titulo = text;
+            console.log('Titulo = ' + titulo);
 
-    </div>
+            containerExpandido.innerHTML = 
+              `<div class="containerSuperior">
+                  <img class="imgExpandida" src="projetos/${evento.target.id}/img.png" alt="">
+                  <div>
+                      <h4>${titulo}</h4>
+                      <p>${paragrafo}</p>
+                  </div>
+          
+                  <img id="xBotaoFechar" class="x" src="img/x.png" alt="">               
+                      
+              </div>
+                      
+              <div class="containerInferior">
+                  <h4>${titulo2}</h4>
+                  <p>${paragrafo2}</p>
+          
+                  <a href="${url}" target="_blank">Ver o Projeto</a>
+              </div>`
 
-    <div class="containerInferior">
-        <h4>Titulo2</h4>
-        <p>Paragrafo2</p>
+              const xBotaoFechar = document.querySelector("#xBotaoFechar");
+              xBotaoFechar.addEventListener('click', () => {
+                  containerExpandido.classList.add('esconder');
+            });
 
-        <a href="https://culturama-alura-topaz.vercel.app/" target="_blank">Ver o Projeto</a>
-    </div>
+         });
 
-</div> `
+         let titulo2 = '';
+        const myRequestTitulo2 = new Request(`projetos/${evento.target.id}/Titulo2.txt`);
+
+        fetch(myRequestTitulo2)
+         .then(response => response.text())
+         .then((text) =>{
+            titulo2 = text;
+            console.log('Titulo2 = ' + titulo2);
+
+            containerExpandido.innerHTML = 
+              `<div class="containerSuperior">
+                  <img class="imgExpandida" src="projetos/${evento.target.id}/img.png" alt="">
+                  <div>
+                      <h4>${titulo}</h4>
+                      <p>${paragrafo}</p>
+                  </div>
+          
+                  <img id="xBotaoFechar" class="x" src="img/x.png" alt="">               
+                      
+              </div>
+                      
+              <div class="containerInferior">
+                  <h4>${titulo2}</h4>
+                  <p>${paragrafo2}</p>
+          
+                  <a href="${url}" target="_blank">Ver o Projeto</a>
+              </div>`
+
+              const xBotaoFechar = document.querySelector("#xBotaoFechar");
+              xBotaoFechar.addEventListener('click', () => {
+                  containerExpandido.classList.add('esconder');
+            });
+
+         });
+
+         let paragrafo = '';
+        const myRequestParagrafo = new Request(`projetos/${evento.target.id}/Paragrafo.txt`);
+
+        fetch(myRequestParagrafo)
+         .then(response => response.text())
+         .then((text) =>{
+            paragrafo = text;
+            console.log('Paragrafo = ' + paragrafo);
+
+            containerExpandido.innerHTML = 
+              `<div class="containerSuperior">
+                  <img class="imgExpandida" src="projetos/${evento.target.id}/img.png" alt="">
+                  <div>
+                      <h4>${titulo}</h4>
+                      <p>${paragrafo}</p>
+                  </div>
+          
+                  <img id="xBotaoFechar" class="x" src="img/x.png" alt="">               
+                      
+              </div>
+                      
+              <div class="containerInferior">
+                  <h4>${titulo2}</h4>
+                  <p>${paragrafo2}</p>
+          
+                  <a href="${url}" target="_blank">Ver o Projeto</a>
+              </div>`
+
+              const xBotaoFechar = document.querySelector("#xBotaoFechar");
+              xBotaoFechar.addEventListener('click', () => {
+                  containerExpandido.classList.add('esconder');
+            });
+
+         });
+
+         let paragrafo2 = '';
+         const myRequestParagrafo2 = new Request(`projetos/${evento.target.id}/Paragrafo2.txt`);
+ 
+         fetch(myRequestParagrafo2)
+          .then(response => response.text())
+          .then((text) =>{
+             paragrafo2 = text;
+             console.log('Paragrafo2 = ' + paragrafo2);
+
+             containerExpandido.innerHTML = 
+              `<div class="containerSuperior">
+                  <img class="imgExpandida" src="projetos/${evento.target.id}/img.png" alt="">
+                  <div>
+                      <h4>${titulo}</h4>
+                      <p>${paragrafo}</p>
+                  </div>
+          
+                  <img id="xBotaoFechar" class="x" src="img/x.png" alt="">               
+                      
+              </div>
+                      
+              <div class="containerInferior">
+                  <h4>${titulo2}</h4>
+                  <p>${paragrafo2}</p>
+          
+                  <a href="${url}" target="_blank">Ver o Projeto</a>
+              </div>`
+              const xBotaoFechar = document.querySelector("#xBotaoFechar");
+              xBotaoFechar.addEventListener('click', () => {
+                  containerExpandido.classList.add('esconder');
+            });
+             
+ 
+          });
+
+
+          let url = '';
+          const myRequestUrl = new Request(`projetos/${evento.target.id}/url.txt`);
+  
+          fetch(myRequestUrl)
+           .then(response => response.text())
+           .then((text) =>{
+              url = text;
+              console.log('url = ' + url);
+
+              containerExpandido.innerHTML = 
+              `<div class="containerSuperior">
+                  <img class="imgExpandida" src="projetos/${evento.target.id}/img.png" alt="">
+                  <div>
+                      <h4>${titulo}</h4>
+                      <p>${paragrafo}</p>
+                  </div>
+          
+                  <img id="xBotaoFechar" class="x" src="img/x.png" alt="">               
+                      
+              </div>
+                      
+              <div class="containerInferior">
+                  <h4>${titulo2}</h4>
+                  <p>${paragrafo2}</p>
+          
+                  <a href="${url}" target="_blank">Ver o Projeto</a>
+              </div>`
+              const xBotaoFechar = document.querySelector("#xBotaoFechar");
+              xBotaoFechar.addEventListener('click', () => {
+                  containerExpandido.classList.add('esconder');
+            });
+             
+           });
+
+    
+        containerExpandido.classList.remove('esconder');
+     
+
+    })
+
+  
+
+
+       
+       
+
+  
+
+   
 
 
 
@@ -92,6 +267,8 @@ botaoSobre.addEventListener('click', ()=>{
     containerSwiperExpandidoMochila_de_viagem.classList.add('esconder')
     containerSwiperExpandidoAlura_plus.classList.add('esconder')
 } )
+
+
 
 
 // const culturama = document.querySelector("#culturama");
