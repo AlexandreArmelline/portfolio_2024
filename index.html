@@ -17,7 +17,6 @@
     <style>
     .swiper {
       width: 120%;
-    
       padding-top: 50px;
       padding-bottom: 50px;
       
@@ -73,14 +72,14 @@
                 </div>
             </div>
 
-<!-- ---------------------------------Containeres Expandidos------------5/11/2024 estou arrumando o botão X------- --> 
+<!-- ---------------------------------Containeres Expandidos------------------------------------- --> 
 
             <div id="containerExpandido" class="containerSwiperExpandido esconder">
                 <div class="containerSuperior">
-                    <img class="imgExpandida" src="projetos/${evento.target.id}/img.png" alt="">
+                    <img id="imgExpandida" class="imgExpandida" src="" alt="">
                     <div>
-                        <h4></h4>
-                        <p></p>
+                        <h4 id="tituloModal"></h4>
+                        <p id="paragrafoModal"></p>
                     </div>
             
                     <img id="xBotaoFechar" class="x" src="img/x.png" alt="">               
@@ -88,39 +87,12 @@
                 </div>
                         
                 <div class="containerInferior">
-                    <h4></h4>
-                    <p></p>
+                    <h4 id="tituloModal2"></h4>
+                    <p id="paragrafoModal2"></p>
             
-                    <a href="${url}" target="_blank"></a>
+                    <a id="urlModal" href="${url}" target="_blank">Ver o Projeto</a>
                 </div>
             </div> 
-
-            
-
-           
-
-            <!-- <div id="carrossel" class="esconder"> -->
-                <!-- Swiper -->
-               <!-- <div class="swiper mySwiper">
-                   <div class="swiper-wrapper">
-                       <div id="culturama" class="swiper-slide">
-                           <img src="img/culturama.png" />
-                       </div>
-                       <div id="alura_books" class="swiper-slide">
-                           <img src="img/alura_books.png" />
-                       </div>
-                       <div id="pao_ancestral" class="swiper-slide">
-                           <img src="img/pao_ancestral.png" />
-                       </div>
-                       <div id="mochila_de_viagem" class="swiper-slide">
-                           <img src="img/mochila_de_viagem.png" />
-                       </div>
-                       <div id="alura_plus" class="swiper-slide">
-                           <img src="img/alura_plus.png" />
-                       </div>
-                   </div>
-               </div>
-           </div> -->
        
         </main>    
 
@@ -130,6 +102,7 @@
 
 <!-- ---------------------------------Containeres Sobre------------------------------ -->
         <div id="containerSobre" class="esconder">
+            <div><img id="xBotaoFecharSobre" class="x" src="img/x.png" alt=""></div>
             <p>
                 Com mais de 10 anos de experiência em controle de qualidade, sempre fui fascinado pela precisão e pelo funcionamento dos sistemas. Na minha antiga função, participava ativamente de certificações ISO 9000, controlava instrumentos de medição de precisão, realizava medições meticulosas de peças automotivas e elaborava relatórios detalhados dos resultados.
             </p>
