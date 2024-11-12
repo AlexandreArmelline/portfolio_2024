@@ -22,25 +22,23 @@ let nomeProjetos = [];
 const myRequestout = new Request('output.txt');
 
 fetch(myRequestout)
-    .then(response => response.text())
-    .then((text) => {
-        // Converte o texto em um array, dividindo por quebras de linha
-        nomeProjetos = text.split('\n').filter(line => line.trim() !== '');
+.then(response => response.text())
+.then((text) => {
+    // Converte o texto em um array, dividindo por quebras de linha
+    nomeProjetos = text.split('\n').filter(line => line.trim() !== '');
 
-        // Verifica se há itens no array antes de tentar acessar
-        if (nomeProjetos.length > 0) {
-            for(let i = 0; i < nomeProjetos.length; i++){
-            container_slide.innerHTML += `<div  class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;}
-        }
-        console.log(nomeProjetos);
-        console.log(container_slide);
-    })
-    .catch((error) => console.error('Erro ao ler o arquivo:', error));
+    // Verifica se há itens no array antes de tentar acessar
+    if (nomeProjetos.length > 0) {
+        for(let i = 0; i < nomeProjetos.length; i++){
+        container_slide.innerHTML += `<div  class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;}
+    }
+    console.log(nomeProjetos);
+    console.log(container_slide);
+})
+.catch((error) => console.error('Erro ao ler o arquivo:', error));
 
     
-
-    container_slide.addEventListener('click', (evento)=>{
-        console.log(evento)
+function inputContainerExpandido(evento){
         imgExpandida.src = `projetos/${evento.target.id}/img.png`
 
         //converte txt em uma variavel com valor = ao conteudo do txt
@@ -115,25 +113,34 @@ fetch(myRequestout)
              urlModal.href = url
              
         });
+    };
 
-        for(let i = 0; i < nomeProjetos.length; i++){
-            if(evento.target.id == nomeProjetos[i]){
-            containerExpandido.classList.remove('esconder');
-            carrossel.classList.add('esconder')}
-        }
-    })
 
- 
-    xBotaoFechar.addEventListener('click', () => {
-        containerExpandido.classList.add('esconder');
-        carrossel.classList.remove('esconder');       
-    });
+container_slide.addEventListener('click', (evento)=>{
+    console.log(evento)
+    
+    inputContainerExpandido(evento)
+
+    for(let i = 0; i < nomeProjetos.length; i++){
+        if(evento.target.id == nomeProjetos[i]){
+        containerExpandido.classList.remove('esconder');
+        carrossel.classList.add('esconder')
+        
+    }}
+})
+
+xBotaoFechar.addEventListener('click', () => {
+    containerExpandido.classList.add('esconder');
+    carrossel.classList.remove('esconder');  
+       
+});
 
 
 botaoProjetos.addEventListener('click', ()=>{
     ola.classList.add('esconder')
     carrossel.classList.remove('esconder') 
     containerSobre.classList.add('esconder')
+    containerExpandido.classList.add('esconder');
 //    -- Initialize Swiper 
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
