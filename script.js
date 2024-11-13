@@ -1,5 +1,6 @@
 const botaoProjetos = document.querySelector("#projetos");
 const ola = document.querySelector("#ola");
+const ola_h2 = document.querySelector("#ola_h2");
 const carrossel = document.querySelector("#carrossel");
 const botaoSobre = document.querySelector("#sobre");
 const containerSobre = document.querySelector("#containerSobre");
@@ -13,6 +14,9 @@ const paragrafoModal2 = document.querySelector("#paragrafoModal2");
 const urlModal = document.querySelector("#urlModal");
 const xBotaoFechar = document.querySelector("#xBotaoFechar");
 const xBotaoFecharSobre = document.querySelector("#xBotaoFecharSobre");
+const tituloDoSlide = document.querySelector('#tituloDoSlide')
+
+
 
 
 
@@ -30,14 +34,60 @@ fetch(myRequestout)
     // Verifica se há itens no array antes de tentar acessar
     if (nomeProjetos.length > 0) {
         for(let i = 0; i < nomeProjetos.length; i++){
-        container_slide.innerHTML += `<div  class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;}
+        container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;}
     }
     console.log(nomeProjetos);
     console.log(container_slide);
 })
 .catch((error) => console.error('Erro ao ler o arquivo:', error));
 
-    
+botaoProjetos.addEventListener('click', ()=>{
+    ola.classList.add('esconder')
+    carrossel.classList.remove('esconder') 
+    containerSobre.classList.add('esconder')
+    containerExpandido.classList.add('esconder');
+//    -- Initialize Swiper 
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: false,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        loop: true,
+        speed: 6000,
+                autoplay: {
+                delay: 0.1 ,
+                }
+
+        });
+} )
+
+
+
+//EFEITO MÁQUINA DE ESCREVER
+
+function typeWrite(e, tempo) {
+    const textoArray = e.textContent.split('');
+    e.textContent = ' ';
+    textoArray.forEach(function (letter, i) {
+        setTimeout(function () {
+            e.textContent += letter;
+        }, tempo * i);
+    });
+
+  
+}
+
+typeWrite(ola_h2, 100 )
+
+
+
 function inputContainerExpandido(evento){
         imgExpandida.src = `projetos/${evento.target.id}/img.png`
 
@@ -51,10 +101,10 @@ function inputContainerExpandido(evento){
          .then((text) =>{
             titulo = text;
             console.log('Titulo = ' + titulo);
-
             tituloModal.textContent = titulo
+            tituloDoSlide.textContent = titulo;
+            typeWrite(tituloDoSlide, 70);
         });
-
 
 
         let titulo2 = '';
@@ -118,15 +168,34 @@ function inputContainerExpandido(evento){
 
 container_slide.addEventListener('click', (evento)=>{
     console.log(evento)
-    
-    inputContainerExpandido(evento)
 
     for(let i = 0; i < nomeProjetos.length; i++){
         if(evento.target.id == nomeProjetos[i]){
+        inputContainerExpandido(evento)    
         containerExpandido.classList.remove('esconder');
         carrossel.classList.add('esconder')
         
     }}
+})
+
+
+container_slide.addEventListener('mouseover', (evento)=>{
+    for(let i = 0; i < nomeProjetos.length; i++){
+        if(evento.target.id == nomeProjetos[i]){
+            inputContainerExpandido(evento)
+           tituloDoSlide.style.opacity = "100";
+           
+    }}
+
+    
+    
+})
+
+
+container_slide.addEventListener('mouseout', ()=>{
+    tituloDoSlide.style.opacity = "0.4";
+    
+   
 })
 
 xBotaoFechar.addEventListener('click', () => {
@@ -135,33 +204,6 @@ xBotaoFechar.addEventListener('click', () => {
        
 });
 
-
-botaoProjetos.addEventListener('click', ()=>{
-    ola.classList.add('esconder')
-    carrossel.classList.remove('esconder') 
-    containerSobre.classList.add('esconder')
-    containerExpandido.classList.add('esconder');
-//    -- Initialize Swiper 
-    var swiper = new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: false,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        loop: true,
-        speed: 6000,
-                autoplay: {
-                delay: 0.1 ,
-                }
-
-        });
-} )
 
 botaoSobre.addEventListener('click', ()=>{
     ola.classList.remove('esconder')
