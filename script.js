@@ -71,17 +71,28 @@ botaoProjetos.addEventListener('click', ()=>{
 
 
 //EFEITO MÁQUINA DE ESCREVER
-
+//let textoArray
+let escritaConcluida = false
 function typeWrite(e, tempo) {
-    const textoArray = e.textContent.split('');
+    let textoArray = e.textContent.split('');
     e.textContent = ' ';
     textoArray.forEach(function (letter, i) {
         setTimeout(function () {
             e.textContent += letter;
+            if(e.textContent.length == textoArray.length){
+                escritaConcluida = true
+            }
         }, tempo * i);
+
+      
+        console.log(escritaConcluida)
+        
     });
 
-  
+    console.log(escritaConcluida)
+ 
+
+ 
 }
 
 typeWrite(ola_h2, 100 )
@@ -104,8 +115,10 @@ function inputContainerExpandido(evento){
             tituloModal.textContent = titulo
             tituloDoSlide.textContent = titulo;
             typeWrite(tituloDoSlide, 70);
+           
         });
-
+        
+        
 
         let titulo2 = '';
         const myRequestTitulo2 = new Request(`projetos/${evento.target.id}/Titulo2.txt`);
@@ -168,32 +181,35 @@ function inputContainerExpandido(evento){
 
 container_slide.addEventListener('click', (evento)=>{
     console.log(evento)
-
+    
     for(let i = 0; i < nomeProjetos.length; i++){
         if(evento.target.id == nomeProjetos[i]){
         inputContainerExpandido(evento)    
         containerExpandido.classList.remove('esconder');
         carrossel.classList.add('esconder')
         
+        
     }}
 })
 
 
 container_slide.addEventListener('mouseover', (evento)=>{
+    
+    if(escritaConcluida == false){preventDefault()}
+   
     for(let i = 0; i < nomeProjetos.length; i++){
         if(evento.target.id == nomeProjetos[i]){
-            inputContainerExpandido(evento)
            tituloDoSlide.style.opacity = "100";
+           inputContainerExpandido(evento);
            
     }}
-
-    
     
 })
 
 
 container_slide.addEventListener('mouseout', ()=>{
     tituloDoSlide.style.opacity = "0.4";
+    
     
    
 })
