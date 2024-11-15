@@ -71,29 +71,18 @@ botaoProjetos.addEventListener('click', ()=>{
 
 
 //EFEITO MÁQUINA DE ESCREVER
-//let textoArray
-let escritaConcluida = false
-function typeWrite(e, tempo) {
-    let textoArray = e.textContent.split('');
-    e.textContent = ' ';
+
+function typeWrite(elementoAlvo, tempo) {
+    let textoArray = elementoAlvo.textContent.split('');
+    elementoAlvo.textContent = ' ';
     textoArray.forEach(function (letter, i) {
         setTimeout(function () {
-            e.textContent += letter;
-            if(e.textContent.length == textoArray.length){
-                escritaConcluida = true
-            }
+            elementoAlvo.textContent += letter;
         }, tempo * i);
-
-      
-        console.log(escritaConcluida)
         
     });
-
-    console.log(escritaConcluida)
- 
-
- 
 }
+
 
 typeWrite(ola_h2, 100 )
 
@@ -114,7 +103,6 @@ function inputContainerExpandido(evento){
             console.log('Titulo = ' + titulo);
             tituloModal.textContent = titulo
             tituloDoSlide.textContent = titulo;
-            typeWrite(tituloDoSlide, 70);
            
         });
         
@@ -183,32 +171,26 @@ container_slide.addEventListener('click', (evento)=>{
     console.log(evento)
     
     for(let i = 0; i < nomeProjetos.length; i++){
-        if(evento.target.id == nomeProjetos[i]){
-        inputContainerExpandido(evento)    
+        if(evento.target.id == nomeProjetos[i]){  
         containerExpandido.classList.remove('esconder');
         carrossel.classList.add('esconder')
-        
-        
     }}
 })
 
 
 container_slide.addEventListener('mouseover', (evento)=>{
-    
-    if(escritaConcluida == false){preventDefault()}
    
     for(let i = 0; i < nomeProjetos.length; i++){
         if(evento.target.id == nomeProjetos[i]){
            tituloDoSlide.style.opacity = "100";
-           inputContainerExpandido(evento);
-           
+           inputContainerExpandido(evento); 
     }}
-    
 })
 
 
 container_slide.addEventListener('mouseout', ()=>{
-    tituloDoSlide.style.opacity = "0.4";
+    tituloDoSlide.style.opacity = "0";
+    escritaConcluida = false
     
     
    
@@ -222,7 +204,7 @@ xBotaoFechar.addEventListener('click', () => {
 
 
 botaoSobre.addEventListener('click', ()=>{
-    ola.classList.remove('esconder')
+    
     containerSobre.classList.remove('esconder')
     carrossel.classList.add('esconder') 
     containerExpandido.classList.add('esconder')
@@ -230,7 +212,9 @@ botaoSobre.addEventListener('click', ()=>{
 } )
 
 xBotaoFecharSobre.addEventListener('click', () =>{
-    containerSobre.classList.add('esconder')  
+    containerSobre.classList.add('esconder') 
+    ola.classList.remove('esconder') 
+    typeWrite(ola_h2, 100 )
 })
 
 
