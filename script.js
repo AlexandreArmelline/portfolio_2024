@@ -174,6 +174,7 @@ container_slide.addEventListener('click', (evento)=>{
         if(evento.target.id == nomeProjetos[i]){  
         containerExpandido.classList.remove('esconder');
         carrossel.classList.add('esconder')
+        
     }}
 })
 
@@ -191,9 +192,6 @@ container_slide.addEventListener('mouseover', (evento)=>{
 container_slide.addEventListener('mouseout', ()=>{
     tituloDoSlide.style.opacity = "0";
     escritaConcluida = false
-    
-    
-   
 })
 
 xBotaoFechar.addEventListener('click', () => {
@@ -204,7 +202,7 @@ xBotaoFechar.addEventListener('click', () => {
 
 
 botaoSobre.addEventListener('click', ()=>{
-    
+    ola.classList.add('esconder') 
     containerSobre.classList.remove('esconder')
     carrossel.classList.add('esconder') 
     containerExpandido.classList.add('esconder')

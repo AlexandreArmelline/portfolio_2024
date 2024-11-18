@@ -85,7 +85,7 @@ main{
 }
 
 #foto{
-    padding: 40px 0px 0px 160px;
+    padding: 20px 0px 0px 160px;
    
 }
 
@@ -101,9 +101,11 @@ main{
     height: 20px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.582);
-    margin: 120px 0px 0px 40px;
+    margin: 35px 0px 0px 40px;
     animation: 3s diminuir infinite alternate;
     position: absolute;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.685);
+
 }
 
 #ola{
@@ -162,7 +164,7 @@ main{
 } */
 
 .containerSwiperExpandido{
-    background-color: #7e72e6f1;
+    backdrop-filter: blur(20px);
     width: 70%;
     height: fit-content;
     position: absolute;
@@ -171,10 +173,9 @@ main{
     left: 0px;
     margin: 5% 0% 0% 15%;
     border-radius: 20px;
+    border: 1px solid rgb(177, 174, 174);
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.432);
-    
-   
-    
+
 }
 
 .containerSuperior{
@@ -267,7 +268,7 @@ main{
 /* <!-- ---------------------------------Containeres Sobre------------------------------ --> */
 
 #containerSobre{
-    background-color: #7e72e6f1;
+    background-color: #0f1444bb;
     width: fit-content;
     height: 70vh;
     position: absolute;
@@ -278,12 +279,15 @@ main{
     animation: 1s crescer ;
     text-align: justify;
     overflow: hidden;
-    
+    backdrop-filter: blur(20px);
+    border: 1px solid rgb(177, 174, 174);
+  
 }
 
 #containerSobre p{
     font-size: 1.2rem;
-    margin: 10px 25px;
+    margin: 30px 100px;
+    overflow: auto;
 }
 
 #containerSobre div{
@@ -291,15 +295,16 @@ main{
     margin: 15px 15px 0px 0px;
 }
 
+/* <!-- ---------------------------------Containeres footer------------------------------ --> */
 
 footer{
     display: flex;  
     justify-content: space-evenly;
-    background-color: #0b0231;
-    height: 15vh;
-    align-items: center; 
-    gap: 250px; 
-    padding-left: 400px;
+    background-color: #100150;
+    height: 30vh;
+    align-items: end; 
+    gap: 200px; 
+    padding: 0px 20px 20px 50px;
     
 }
 
@@ -316,16 +321,15 @@ footer h1, p{
 
 #containerRedeSociais{
     display: flex;
-    align-items: end;
-    gap: 30px;
-    height: 100%;
-    padding-bottom: 5px;
-    padding-right: 100px;
+    align-items: baseline;
+    gap: 40px;
+    
+  
 }
 
 footer img{ 
     width: 25px;
-    height: fit-content;
+
 }
 
 
@@ -338,7 +342,7 @@ footer img{
         transform: translate(0px, 0px);
     }
     to{
-        transform: translate(0px, 70px);
+        transform: translate(0px, 20px);
     }
 }
 
