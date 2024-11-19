@@ -1,1 +1,1 @@
-Pão Ancestral..... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, iure distinctio, exercitationem, dolores itaque non omnis at eveniet.
+Site de receitas de pães desenvolvido durante um curso no Senac, utilizando HTML, CSS e design responsivo. O projeto destaca as tradições da panificação artesanal, combinando estética minimalista e funcionalidade para promover a cultura do pão caseiro.
