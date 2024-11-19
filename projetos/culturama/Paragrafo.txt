@@ -1,1 +1,1 @@
-Culturama..... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, iure distinctio, exercitationem, dolores itaque non omnis at eveniet.
+Projeto desenvolvido como parte do curso de HTML e CSS na Alura. Consiste em uma página web responsiva que apresenta informações culturais e eventos, focando em design intuitivo e boa organização visual, com aplicação de conceitos modernos de front-end.

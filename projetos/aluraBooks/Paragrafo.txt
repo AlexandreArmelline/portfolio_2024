@@ -1,1 +1,1 @@
-Alura Books..... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, iure distinctio, exercitationem, dolores itaque non omnis at eveniet.
+Projeto desenvolvido durante o curso "HTML e CSS: responsividade com mobile-first" da Alura. Consiste em uma página responsiva para uma plataforma de livros digitais, com design adaptado para diferentes tamanhos de tela, aplicando conceitos de mobile-first e boas práticas de HTML e CSS.

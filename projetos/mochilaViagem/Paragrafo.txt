@@ -1,1 +1,1 @@
-Mochila..... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, iure distinctio, exercitationem, dolores itaque non omnis at eveniet.
+Projeto criado durante curso da Alura "JavaScript na Web: armazenando dados no navegador", onde o usuário pode adicionar, visualizar, editar a quantidade e excluir itens de um lista de viagem, que é armazenada localmente no navegador usando localStorage.

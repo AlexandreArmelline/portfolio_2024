@@ -1,0 +1,1 @@
+HTML semântico, CSS responsivo, metodologia mobile-first, flexbox e Grid layout, design responsivo.

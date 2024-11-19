@@ -1,1 +1,1 @@
-Alura Plus..... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, iure distinctio, exercitationem, dolores itaque non omnis at eveniet.
+Projeto desenvolvido durante o curso "Praticando HTML/CSS" como exercício prático para consolidar habilidades. Trata-se de uma landing page estilosa e responsiva, criada para promover uma plataforma de conteúdos digitais, com design moderno e foco na experiência do usuário.
