@@ -422,5 +422,9 @@ footer img{
         margin: 10px 0px 0px 10px;
         cursor: pointer;
     }
+
+    #logo img{
+        width: 200px;
+ 
     
 }
