@@ -30,7 +30,7 @@ header{
     height: 30vh;
 }
 
-nav{
+#navDesktop{
     display: flex;
     width: 50vw;
     height: fit-content;
@@ -399,4 +399,28 @@ footer img{
    50%{
        opacity: 0;
    }
+}
+
+
+
+
+@media (max-width: 900px){
+
+
+    header{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30vh;
+    }
+
+    #navDesktop{
+        display: none;
+    }
+
+    #navResponsivo{
+        display: flex;
+        margin: 10px 0px 0px 10px;
+        cursor: pointer;
+    }
+    
 }
