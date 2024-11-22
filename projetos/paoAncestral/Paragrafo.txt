@@ -1,1 +1,1 @@
-Site de receitas de pães desenvolvido durante um curso no Senac, utilizando HTML, CSS e design responsivo. O projeto destaca as tradições da panificação artesanal, combinando estética minimalista e funcionalidade para promover a cultura do pão caseiro.
+Site de receitas de pães desenvolvido durante curso no Senac, utilizando HTML, CSS e design responsivo. O projeto destaca as tradições da panificação artesanal, combinando estética minimalista e funcionalidade para promover a cultura do pão caseiro.
