@@ -18,6 +18,7 @@
 #containerPrincipal{
    display: flex;
    flex-direction: column;
+   justify-content: space-between;
    background-image: linear-gradient(45deg, #0F1444, #871FF2);
    height: 100vh;
 }
@@ -81,7 +82,8 @@ button:active{
 main{
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    padding-bottom: 100px;
+    /* height: 100vh; */
 }
 
 #foto{
@@ -323,7 +325,7 @@ footer{
     display: flex;  
     justify-content: space-evenly;
     background-color: #100150;
-    height: 20vh;
+
     align-items: end; 
     gap: 200px; 
     padding: 0px 20px 10px 50px;
