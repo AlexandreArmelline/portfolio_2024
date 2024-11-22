@@ -330,9 +330,6 @@ footer{
     
 }
 
-#containerTextosFooter{
-   
-}
 
 footer h1, p{ 
     color: #ffffff;
@@ -426,11 +423,42 @@ footer img{
     #logo img{
         width: 250px;
     }
+
+    main{
+        flex-direction: column;
+        justify-content: center;
+      
+    }
  
     #foto img{
-        width: 100px;  
+        width: 150px;  
+    }
+
+    #elipse{
+        width: 100px;
+        height: 10px;
+     
     
-    
+    }
+
+    #ola h2{
+        padding: 0px 10px 50px 0px;
+    }
+
+
+    footer{
+        padding: 0px 20px 10px 50px;
+        
+    }
+
+    #containerTextosFooter{
+        display: none;
+    }
+
+    #containerRedeSociais{
+       
+        
+      
     }
     
 }
