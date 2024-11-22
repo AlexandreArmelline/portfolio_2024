@@ -325,10 +325,10 @@ footer{
     display: flex;  
     justify-content: space-evenly;
     background-color: #100150;
-
     align-items: end; 
     gap: 200px; 
     padding: 0px 20px 10px 50px;
+    height: 100px;
     
 }
 
@@ -417,9 +417,14 @@ footer img{
     }
 
     #navResponsivo{
-        display: flex;
+        display: block;
         margin: 10px 0px 0px 10px;
         cursor: pointer;
+    }
+
+    #logo{
+        padding: 0px 0px 0px 0px;
+        text-align: center ;
     }
 
     #logo img{
@@ -429,7 +434,8 @@ footer img{
     main{
         flex-direction: column;
         justify-content: start;
-       align-items: center;
+        align-items: center;
+        padding-bottom: 0px;
       
     }
 
@@ -462,7 +468,7 @@ footer img{
 
 
     footer{
-        padding: 0px 20px 10px 50px;
+        height: 70px;
         
     }
 
