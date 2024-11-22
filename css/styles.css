@@ -403,6 +403,7 @@ footer img{
 
 
 
+
 @media (max-width: 900px){
 
 
@@ -433,9 +434,9 @@ footer img{
 
     main{
         flex-direction: column;
-        /* justify-content: end; */
+       
         align-items: center;
-        padding-bottom: 0px;
+        padding-bottom: 200px;
       
     }
 
