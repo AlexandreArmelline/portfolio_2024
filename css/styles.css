@@ -73,11 +73,11 @@ button:active{
     filter: drop-shadow(0px 0px 3px #79C6FD);
 }
 
-#nome h1{
+/* #nome h1{
     color: var(--corFont1);
     font-size: 1.3rem;
     font-family: var(--font1);
-}
+} */
 
 main{
     display: flex;
@@ -173,6 +173,7 @@ main{
     border-radius: 20px;
     border: 1px solid rgb(177, 174, 174);
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.432);
+    animation: crescer 1s;
 
 }
 
@@ -410,6 +411,7 @@ footer img{
         flex-direction: column;
         justify-content: start;
         height: fit-content;
+        
     }
 
     #navDesktop{
@@ -442,6 +444,7 @@ footer img{
         align-items: center;
         padding-bottom: 200px;
       
+      
     }
 
     #foto{
@@ -465,6 +468,7 @@ footer img{
         justify-content: center;
         width: 100vw;
         padding: 80px 0px 0px 30px;  
+        
        
     }
 
@@ -475,6 +479,7 @@ footer img{
 
     footer{
         height: 90px;
+     
         
     }
 
