@@ -15,6 +15,11 @@ const urlModal = document.querySelector("#urlModal");
 const xBotaoFechar = document.querySelector("#xBotaoFechar");
 const xBotaoFecharSobre = document.querySelector("#xBotaoFecharSobre");
 const tituloDoSlide = document.querySelector('#tituloDoSlide')
+const menu = document.querySelector('#menu')
+const menuReponsivo = document.querySelector('#menuReponsivo')
+const XmenuReponsivo = document.querySelector('#XmenuReponsivo')
+
+
 
 
 
@@ -168,7 +173,7 @@ function inputContainerExpandido(evento){
 
 
 container_slide.addEventListener('click', (evento)=>{
-    console.log(evento)
+    console.log('eventos' + evento)
     
     for(let i = 0; i < nomeProjetos.length; i++){
         if(evento.target.id == nomeProjetos[i]){  
@@ -209,10 +214,26 @@ botaoSobre.addEventListener('click', ()=>{
 
 } )
 
-xBotaoFecharSobre.addEventListener('click', () =>{
+xBotaoFecharSobre.addEventListener('click', ()=>{
     containerSobre.classList.add('esconder') 
     ola.classList.remove('esconder') 
     typeWrite(ola_h2, 100 )
 })
+
+
+menuReponsivo.addEventListener('click', ()=>{
+    menu.style.display = 'block'
+    menuReponsivo.style.display = 'none'
+    XmenuReponsivo.style.display = 'block'
+  
+})
+
+XmenuReponsivo.addEventListener('click', ()=>{
+    menu.style.display = 'none'
+    menuReponsivo.style.display = 'block'
+    XmenuReponsivo.style.display = 'none'
+  
+})
+
 
 

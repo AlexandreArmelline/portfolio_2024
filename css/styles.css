@@ -31,7 +31,7 @@ header{
     height: 30vh;
 }
 
-#navDesktop{
+#menu{
     display: flex;
     width: 50vw;
     height: fit-content;
@@ -414,21 +414,24 @@ footer img{
         
     }
 
-    #navDesktop{
+    #menu{
         display: none;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
     }
 
-    #navResponsivo{
+    #menuReponsivo{
         display: block;
+        width: 25px;
         margin: 10px 0px 0px 10px;
-       
     }
 
-    #navResponsivo img{
-        filter: drop-shadow(0px 0px 3px #79C6FD);
-       
+    #XmenuReponsivo{
+        width: 25px;
+        margin: 10px 0px 0px 10px;
     }
-
   
     #logo{
         padding: 0px 0px 0px 0px;
