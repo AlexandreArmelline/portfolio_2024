@@ -222,6 +222,7 @@ xBotaoFecharSobre.addEventListener('click', ()=>{
 
 
 menuReponsivo.addEventListener('click', ()=>{
+    menu.style.animation = 'aparecer 1s'
     menu.style.display = 'block'
     menuReponsivo.style.display = 'none'
     XmenuReponsivo.style.display = 'block'
@@ -229,9 +230,11 @@ menuReponsivo.addEventListener('click', ()=>{
 })
 
 XmenuReponsivo.addEventListener('click', ()=>{
-    menu.style.display = 'none'
+    
+    menu.style.animation = 'desaparecer 1s'
     menuReponsivo.style.display = 'block'
     XmenuReponsivo.style.display = 'none'
+    setTimeout(()=>{menu.style.display = 'none'}, 1000)
   
 })
 

@@ -354,7 +354,23 @@ footer img{
 }
 
 
+@keyframes aparecer {
+    from{
+        transform: translate(-200px, 0px);
+    }
+    to{
+        transform: translate(0px, 0px);
+    }
+}
 
+@keyframes desaparecer {
+    from{
+        transform: translate(0px, 0px);
+    }
+    to{
+        transform: translate(-200px, 0px);
+    }
+}
 
 
 
@@ -417,10 +433,31 @@ footer img{
     #menu{
         display: none;
         position: absolute;
-        top: 30px;
-        left: 30px;
-
+        top: 40px;
+        left: 20px;
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.192);
+        z-index: 1;
+        width: 40vw;
+        height: auto;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        backdrop-filter: blur(20px);
+        
     }
+
+    button{
+        box-shadow: none;
+        background-color: transparent;
+        text-align: justify;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 2px black;
+        
+    }
+
+    
+    
 
     #menuReponsivo{
         display: block;
