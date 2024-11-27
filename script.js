@@ -18,7 +18,8 @@ const tituloDoSlide = document.querySelector('#tituloDoSlide')
 const menu = document.querySelector('#menu')
 const menuReponsivo = document.querySelector('#menuReponsivo')
 const XmenuReponsivo = document.querySelector('#XmenuReponsivo')
-
+const main = document.querySelector('main')
+const mySwiper = document.querySelector('.mySwiper')
 
 
 
@@ -51,6 +52,7 @@ botaoProjetos.addEventListener('click', ()=>{
     carrossel.classList.remove('esconder') 
     containerSobre.classList.add('esconder')
     containerExpandido.classList.add('esconder');
+    desaparecerMenu();
 //    -- Initialize Swiper 
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -169,7 +171,15 @@ function inputContainerExpandido(evento){
              urlModal.href = url
              
         });
-    };
+};
+
+
+function desaparecerMenu(){
+    menu.style.animation = 'desaparecer 1s'
+    menuReponsivo.style.display = 'block'
+    XmenuReponsivo.style.display = 'none'
+    setTimeout(()=>{menu.style.display = 'none'}, 1000)
+}
 
 
 container_slide.addEventListener('click', (evento)=>{
@@ -211,6 +221,7 @@ botaoSobre.addEventListener('click', ()=>{
     containerSobre.classList.remove('esconder')
     carrossel.classList.add('esconder') 
     containerExpandido.classList.add('esconder')
+    desaparecerMenu();
 
 } )
 
@@ -230,13 +241,12 @@ menuReponsivo.addEventListener('click', ()=>{
 })
 
 XmenuReponsivo.addEventListener('click', ()=>{
-    
-    menu.style.animation = 'desaparecer 1s'
-    menuReponsivo.style.display = 'block'
-    XmenuReponsivo.style.display = 'none'
-    setTimeout(()=>{menu.style.display = 'none'}, 1000)
-  
+    desaparecerMenu();
 })
 
+
+main.addEventListener('click', ()=>{
+    desaparecerMenu();
+})
 
 

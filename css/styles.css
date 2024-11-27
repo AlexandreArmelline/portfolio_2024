@@ -456,9 +456,6 @@ footer img{
         
     }
 
-    
-    
-
     #menuReponsivo{
         display: block;
         width: 25px;
@@ -483,8 +480,6 @@ footer img{
         flex-direction: column;
         align-items: center;
         padding-bottom: 200px;
-      
-      
     }
 
     #foto{
@@ -499,28 +494,29 @@ footer img{
         width: 130px;
         height: 10px;
         margin: 35px 0px 0px 15px;
-     
-    
     }
 
     #ola{
-        display: flex;
-        justify-content: center;
         width: 100vw;
-        padding: 80px 0px 0px 30px;  
-        
-       
+        padding: 0px 0px 0px 80px;  
+        margin: auto;
     }
 
     #ola h2{
         padding: 0px 0px 0px 0px;
     }
 
+    #carrossel{
+     
+       
+    }
+
+    #container_slide{
+       
+    }
 
     footer{
         height: 90px;
-     
-        
     }
 
     #containerTextosFooter{
