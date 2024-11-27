@@ -24,9 +24,6 @@ const larguraTela = window.screen.width;
 
 
 
-
-
-
 //Converte o arquivo output.txt em uma array(let nomeProjetos)  
 
 let nomeProjetos = [];
@@ -253,7 +250,9 @@ XmenuReponsivo.addEventListener('click', ()=>{
 
 
 main.addEventListener('click', ()=>{
-    desaparecerMenu();
+     if(larguraTela < 900){
+        desaparecerMenu();
+   }
 })
 
 
