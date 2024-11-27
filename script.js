@@ -20,6 +20,7 @@ const menuReponsivo = document.querySelector('#menuReponsivo')
 const XmenuReponsivo = document.querySelector('#XmenuReponsivo')
 const main = document.querySelector('main')
 const mySwiper = document.querySelector('.mySwiper')
+const larguraTela = window.screen.width;
 
 
 
@@ -52,7 +53,9 @@ botaoProjetos.addEventListener('click', ()=>{
     carrossel.classList.remove('esconder') 
     containerSobre.classList.add('esconder')
     containerExpandido.classList.add('esconder');
-    desaparecerMenu();
+    if(larguraTela < 900){
+        desaparecerMenu();
+   }
 //    -- Initialize Swiper 
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
@@ -221,7 +224,11 @@ botaoSobre.addEventListener('click', ()=>{
     containerSobre.classList.remove('esconder')
     carrossel.classList.add('esconder') 
     containerExpandido.classList.add('esconder')
-    desaparecerMenu();
+   
+    if(larguraTela < 900){
+         desaparecerMenu();
+    }
+    
 
 } )
 
@@ -237,7 +244,7 @@ menuReponsivo.addEventListener('click', ()=>{
     menu.style.display = 'block'
     menuReponsivo.style.display = 'none'
     XmenuReponsivo.style.display = 'block'
-  
+
 })
 
 XmenuReponsivo.addEventListener('click', ()=>{
@@ -248,5 +255,9 @@ XmenuReponsivo.addEventListener('click', ()=>{
 main.addEventListener('click', ()=>{
     desaparecerMenu();
 })
+
+
+
+
 
 
