@@ -154,8 +154,14 @@ main{
     margin-bottom: 5%;
 }
 
+.swiper-slide{
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.822);
+}
+
 .swiper-wrapper{
     cursor: pointer;
+    
  
 }
 
@@ -507,13 +513,15 @@ footer img{
 
     #carrossel{
         width: 150%;
-        /* height: fit-content;
-        text-align: center;
-        border-radius: 30px 0px 0px 30px;
-        padding-left: 10px;
-        animation: 1s crescer;
-        overflow: hidden; */
     }
+
+    .swiper-slide{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+    }   
+    
+
     
 
     footer{

@@ -37,8 +37,15 @@ fetch(myRequestout)
 
     // Verifica se há itens no array antes de tentar acessar
     if (nomeProjetos.length > 0) {
+      
         for(let i = 0; i < nomeProjetos.length; i++){
-        container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;}
+            if(larguraTela > 900){
+                container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;
+            }else{
+                container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/><br>Teste</div>`;
+            }
+        }
+        
     }
     console.log(nomeProjetos);
     console.log(container_slide);
@@ -64,7 +71,7 @@ botaoProjetos.addEventListener('click', ()=>{
             stretch: 0,
             depth: 100,
             modifier: 1,
-            slideShadows: true,
+            slideShadows: false,
         },
         loop: true,
         speed: 6000,
@@ -194,6 +201,7 @@ container_slide.addEventListener('click', (evento)=>{
 })
 
 
+
 container_slide.addEventListener('mouseover', (evento)=>{
    
     for(let i = 0; i < nomeProjetos.length; i++){
@@ -250,9 +258,9 @@ XmenuReponsivo.addEventListener('click', ()=>{
 
 
 main.addEventListener('click', ()=>{
-     if(larguraTela < 900){
+    if(larguraTela < 900){
         desaparecerMenu();
-   }
+    }
 })
 
 
