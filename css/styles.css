@@ -448,7 +448,7 @@ footer img{
         padding-left: 10px;
         padding-bottom: 10px;
         backdrop-filter: blur(20px);
-        
+        border: 1px solid rgb(177, 174, 174);
     }
 
     button{
@@ -516,7 +516,7 @@ footer img{
     }
 
     #tituloDoSlide{
-    
+        display: none;
     }
 
     .swiper-slide{
