@@ -515,14 +515,17 @@ footer img{
         width: 150%;
     }
 
+    #tituloDoSlide{
+    
+    }
+
     .swiper-slide{
         display: flex;
         flex-direction: column;
         box-shadow: none;
+        color: var(--corFont1);
+        font-family: var(--font2);
     }   
-    
-
-    
 
     footer{
         height: 90px;

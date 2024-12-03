@@ -42,20 +42,31 @@ fetch(myRequestout)
             if(larguraTela > 900){
                 container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/></div>`;
             }else{
-                container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/><br>Teste</div>`;
+
+                //converte txt em uma variavel com valor = ao conteudo do txt
+        
+                let titulo = '';
+                const myRequestTitulo = new Request(`projetos/${nomeProjetos[i]}/Titulo.txt`);
+
+                fetch(myRequestTitulo)
+                    .then(response => response.text())
+                    .then((text) =>{
+                        titulo = text;
+                        container_slide.innerHTML += `<div class="swiper-slide"><img src="projetos/${nomeProjetos[i]}/img.png" id="${nomeProjetos[i]}"/><br>${titulo}</div>`;
+                    });
             }
         }
         
     }
     console.log(nomeProjetos);
-    console.log(container_slide);
+    console.log('container slide:!' + container_slide.innerHTML);
 })
 .catch((error) => console.error('Erro ao ler o arquivo:', error));
 
 botaoProjetos.addEventListener('click', ()=>{
-    ola.classList.add('esconder')
-    carrossel.classList.remove('esconder') 
-    containerSobre.classList.add('esconder')
+    ola.classList.add('esconder');
+    carrossel.classList.remove('esconder') ;
+    containerSobre.classList.add('esconder');
     containerExpandido.classList.add('esconder');
     if(larguraTela < 900){
         desaparecerMenu();
