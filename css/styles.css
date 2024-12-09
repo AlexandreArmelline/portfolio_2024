@@ -514,6 +514,8 @@ footer img{
     #carrossel{
         width: 100vw;
         padding-left: 0px;
+
+        margin-top: 30px;
     }
 
     #tituloDoSlide{
