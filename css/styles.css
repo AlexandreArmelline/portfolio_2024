@@ -566,16 +566,22 @@ footer img{
 
     .containerInferior{
         margin: 0px 0px 0px 0px;  
-        padding: 0px 30px 0px 0px;
+   
     }
 
     .containerInferior h4{
         font-size: 1.2rem;
+        margin: 25px;
+    }
+
+    .containerInferior p{
+        margin: 0px 25px;
     }
 
     .containerInferior a{
         font-size: 1rem;
         width: 200px;
+     
     }
 
     #containerTextosFooter{
