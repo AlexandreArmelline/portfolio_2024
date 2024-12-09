@@ -551,6 +551,10 @@ footer img{
         margin: 25px 0px 0px 0px;
     }
 
+    .x{
+        align-self: end;
+    }
+
     .imgExpandida{
         width: 80vw;
         margin: 20px 0px;
@@ -568,10 +572,6 @@ footer img{
     #containerTextosFooter{
         display: none;
     }
-
-    
- 
-
 
 
 }
