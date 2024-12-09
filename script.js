@@ -109,7 +109,7 @@ function typeWrite(elementoAlvo, tempo) {
 }
 
 
-typeWrite(ola_h2, 100 )
+typeWrite(ola_h2, 100)
 
 
 
