@@ -82,19 +82,16 @@ button:active{
 main{
     display: flex;
     justify-content: space-between;
-
 }
 
 #foto{
     padding: 20px 0px 100px 160px;
-   
 }
 
 #foto img{
     width: 250px;  
     filter: drop-shadow(0px 0px 15px #79C6FD);
     animation: 3s movimentar infinite alternate;
-
 }
 
 #elipse{
@@ -106,7 +103,6 @@ main{
     animation: 3s diminuir infinite alternate;
     position: absolute;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.685);
-
 }
 
 #ola{
@@ -476,7 +472,7 @@ footer img{
   
     #logo{
         padding: 0px 0px 0px 0px;
-        text-align: center ;
+        text-align: center;
     }
 
     #logo img{
@@ -486,6 +482,7 @@ footer img{
     main{
         flex-direction: column;
         align-items: center;
+        
         /* padding-bottom: 200px; */
     }
 
@@ -529,7 +526,14 @@ footer img{
         box-shadow: none;
         color: var(--corFont1);
         font-family: var(--font2);
-    }  
+    } 
+    
+    .containerSwiperExpandido{
+        width: 90%;
+        margin: 10px 15px;
+        
+    }
+    
     
     .containerSuperior{
         flex-direction: column-reverse;
@@ -538,6 +542,15 @@ footer img{
     .imgExpandida{
         width: 200px;
    
+    }
+
+    .containerInferior{
+        margin: 0px 0px 0px 0px;  
+    }
+
+    .containerInferior a{
+        font-size: 1rem;
+        width: 200px;
     }
 
     #containerTextosFooter{
