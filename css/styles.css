@@ -82,7 +82,7 @@ button:active{
 main{
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+
 }
 
 #foto{
@@ -333,7 +333,8 @@ footer{
     align-items: end; 
     gap: 200px; 
     padding: 0px 20px 10px 50px;
-    height: 150px;
+    margin-top: 100px;
+    height: 70px;
     
 }
 
