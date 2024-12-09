@@ -505,7 +505,8 @@ footer img{
 
     #ola{
         width: 100vw;
-        padding: 0px 0px 0px 80px;  
+        padding: 0px 0px 0px 80px;
+        margin-top: 30px;  
         margin-bottom: 160px;
     }
 
