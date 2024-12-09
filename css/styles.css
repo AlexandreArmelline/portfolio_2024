@@ -432,6 +432,7 @@ footer img{
         flex-direction: column;
         justify-content: start;
         height: fit-content;
+        margin-bottom: 50px;
         
     }
 
@@ -515,7 +516,7 @@ footer img{
         width: 100vw;
         padding-left: 0px;
 
-        margin-top: 100px;
+        
     }
 
     #tituloDoSlide{
