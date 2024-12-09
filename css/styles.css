@@ -531,6 +531,7 @@ footer img{
     .containerSwiperExpandido{
         width: 90%;
         margin: 10px 15px;
+        padding: 10px;
         
     }
     
@@ -540,6 +541,14 @@ footer img{
 
     .containerSuperior div{
         padding: 0px;
+    }
+
+    .containerSuperior h4{
+        margin-left: 0px;
+    }
+    
+    .containerSuperior p{
+        margin: 25px 0px 0px 0px;
     }
 
     .imgExpandida{
