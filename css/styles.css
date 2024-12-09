@@ -506,11 +506,12 @@ footer img{
     #ola{
         width: 100vw;
         padding: 0px 0px 0px 80px;  
-        margin: auto;
+        margin-bottom: 210px;
     }
 
     #ola h2{
         padding: 0px 0px 0px 0px;
+        font-size: 2.5rem;
     }
 
     #carrossel{
