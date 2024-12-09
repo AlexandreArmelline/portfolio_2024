@@ -512,7 +512,8 @@ footer img{
     }
 
     #carrossel{
-        width: 150%;
+        width: 100vw;
+        padding-left: 0px;
     }
 
     #tituloDoSlide{
@@ -526,6 +527,7 @@ footer img{
         color: var(--corFont1);
         font-family: var(--font2);
     }   
+
 
     footer{
         height: 90px;
