@@ -530,8 +530,10 @@ footer img{
     
     .containerSwiperExpandido{
         width: 90%;
+        height: 90%;
         margin: 10px 15px;
         padding: 10px;
+        overflow-y: auto;
         
     }
     
