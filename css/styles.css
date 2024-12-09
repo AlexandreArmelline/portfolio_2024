@@ -517,8 +517,6 @@ footer img{
 
     #carrossel{
         width: 100vw;
-
-
     }
 
     #tituloDoSlide{
@@ -531,11 +529,24 @@ footer img{
         box-shadow: none;
         color: var(--corFont1);
         font-family: var(--font2);
-    }   
+    }  
+    
+    .containerSuperior{
+        flex-direction: column-reverse;
+    }
+
+    .imgExpandida{
+        width: 200px;
+   
+    }
 
     #containerTextosFooter{
         display: none;
     }
+
+    
+ 
+
 
 
 }
